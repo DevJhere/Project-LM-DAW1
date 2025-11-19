@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Centro Adopción La Turra</title>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <h1>Centro de Adopción de Animales La Turra</h1>
+            <img src="./src/images/Logo.png" alt="Logo Animales" class="logo">
+        </nav>
+    </header>
+
+    <main>
+        
+        <div class="contenedor">
+            <div class="imagen-principal">
+                <img src="./src/images/protectoras-de-animales-en-madrid.jpg" alt="Imagen Adopcion">
+            </div>
+
+            <section>
+                <h2>Adopta con nosotros</h2>
+                <p>En nuestro centro <strong>ayudamos</strong> a estos pequeños animales a encontrar una familia que puedan brindarle mucho amor. Estos animales han sido rescatados para poder darles una mejor vida. Estos pobre animales han sido abandonados o perdidos, por eso contamos con profesionales y numeros voluntarios, que garantizan el bien estar de estos animales hasta que puedan encontrar una nueva familia o reecontar su hogar</p>
+                <p>Nuestro centro tiene como objetivo promover las adopciones, fomentar la tenencia responsable y ayudar a los propietarios a encontrar mascotas perdidas también. Se realizan campañas periódicas para promover las adopciones y mejorar la calidad de vida de los animales en la ciudad. Si estás interesad@ en adopta un perro, gato o cualquier animale que este en nuestro centro, puedes ponerte en contacto con esta <strong>protectora de animales</strong>. Para más información pincha aquí -> <a href="https://www.tiendanimal.es/articulos/protectoras-de-animales-en-madrid/?srsltid=AfmBOoo4PP8PzOxd7rHfUrESVAw7omRFJ9HmM6QZ3MbRncKD9Y5xP1NT" target="_blank">Adopta</a></p>
+
+                <h3>Lista de Animales a Adoptar</h3>
+
+                <div class="lista-animales">
+                    
+                    <ul>
+                        <li><strong>Gato</strong></li>
+                        <li><strong>Perro</strong></li>
+                        <li><strong>Hurón</strong></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>Tabla de Adopciones Recientes</h2>
+                <table>
+                    <tr>
+                        <th>Nº Adopción</th>
+                        <th>Nombre</th>
+                        <th>Fecha</th>
+                        <th>Foto</th>
+                    </tr>
+
+                    <tr>
+                        <td>1</td>
+                        <td>Luna</td>
+                        <td>20/05/2025</td>
+                        <td><img src="./src/images/luna.jpg" alt="Foto Luna Perro"></td>
+                    </tr>
+
+                     <tr>
+                        <td>2</td>
+                        <td>Michi</td>
+                        <td>10/08/2025</td>
+                        <td><img src="./src/images/michi.jpg" alt="Foto Luna Perro"></td>
+                    </tr>
+
+                     <tr>
+                        <td>3</td>
+                        <td>Trueno</td>
+                        <td>20/05/2025</td>
+                        <td><img src="./src/images/trueno.jpg" alt="Foto Luna Perro"></td>
+                    </tr>
+
+                </table>
+            </section>
+
+            <h2>Formulario de Adopción</h2>
+
+            <form class="formulario">
+                <fieldset>
+                    <legend>Datos de Contacto</legend>
+                    
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" placeholder="Nombre" required>
+
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido" placeholder="Apellido" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Email" required>
+
+                    <label for="tipo-animal">Animal a Adoptar</label>
+                    <select class="adoptar">
+                        <option value="1">Gato</option>
+                        <option value="2">Perro</option>
+                        <option value="3">Hurón</option>
+                    </select>
+
+                    <label for="fecha">Fecha de Nacimiento</label>
+                    <input type="date" id="fehca" placeholder="Email">
+                </fieldset>
+
+                <input type="submit" value="Enviar" class="boton-enviar">
+            </form>
+        </div>
+
+    </main>
+ 
+</body>
+</html>
