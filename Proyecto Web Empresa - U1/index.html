@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro Educativo Neu</title>
+</head>
+<body style="background-color: rgba(81, 116, 119, 0.471);">
+    <center>
+        <header>
+            <a href="/"><img src="./src/images/espacio-educa.png" alt="logotipo-educativo" style="max-width: 15%"></a> 
+            <h1 style="color: brown;">Espacio Educativo Neu</h1>
+        </header>
+        
+        <main>
+            <section>
+                <p style="width: 940px;">
+                 Espacio Educativo NEU se especializa en psicopedagogía clínica, una disciplina que combina herramientas de la psicología y la pedagogía para abordar de forma integral el desarrollo emocional, cognitivo y social de niños y adolescentes. <a href="https://www.espacioeducativoneu.com/" target="_blank">Pincha aquí</a> para más información
+                </p>
+                
+            </section>
+            
+            <br>
+            <p>
+                <h2 style="color: rgb(240, 114, 51);">Formulario de Contacto</h2>
+            </p>
+
+            
+        </main>
+       
+    </center>
+     <form action="contact-form">
+                <fieldset>
+                    <legend>Datos Generales</legend>
+
+                    <label for="nombre">Nombre:</label>
+                    <input id="nombre" name="nombre" type="text" placeholder="Escribe tu nombre aquí" required>
+                    
+                    <p></p>
+
+                    <label for="apellido">Apellido:</label>
+                    <input id="apellido" name="apellido" type="text" placeholder="Escribe tu apellido aquí" required>
+
+                    <p></p>
+
+                    <label for="telefono">Telefono:</label>
+                    <input id="tel" name="telefono" type="tel" placeholder="Escribe tu teléfono aquí" pattern="[\\d\\s+()-]{7,}" required>
+                    
+                    <p></p>
+
+                    <label for="email">Email:</label>
+                    <input id="email" name="email" type="email" placeholder="Escribe tu email aquí" required>
+
+                </fieldset>
+
+                <p></p>
+
+                <fieldset> 
+                    <legend>Citas</legend>
+                    
+                    <label for="cita">Cita:</label>
+                    <input id="cita" name="cita" type="datetime-local">
+
+                    <p></p>
+
+                    <label for="citaHora">Hora de Cita:</label>
+                    <input id="idCitaHora" name="citaHora" type="time" step="60">
+
+                    <p></p>
+                    
+                    <label for="texto">Descripción de la Cita: </label>
+                    <textarea name="texto" id="texto" rows="4" cols="50"></textarea>
+
+                </fieldset>
+
+                <p></p>
+
+                <fieldset>
+                   <fieldset>
+                     <legend>Opciones de Citas</legend>
+
+                    <input type="radio" id="id_cita" name="tipo_cita" value="niño" checked>
+                    <label for="tipo_cita">Niño(3-6) años</label>
+
+                    <input type="radio" id="id_cita" name="tipo_cita" value="niño-mayor" >
+                    <label for="tipo_cita">Niño(6-12) años</label>
+
+                    <input type="radio" id="id_cita" name="tipo_cita" value="adolescente" >
+                    <label for="tipo_cita">Adolescente(12-17) años</label>
+                    </fieldset>
+
+                    <p></p>
+
+                    <fieldset>
+                        <legend>Turno Mañana o Tarde</legend>
+                        
+                        <input type="checkbox" id="id_turno" name="turno_mañana" value="turno_mañana">
+                        <label for="">Mañana</label>
+                        <input type="checkbox" id="id_turno" name="turno-tarde" value="turno_tarde">
+                        <label for="turno_tarde">Tarde</label>
+
+                        <p></p>
+
+                        <label for="educador">Elige el Educador/a</label>
+                        <select name="educador" id="educador">
+                            <option value="sinOpcion">------</option>
+                            <optgroup label="Educadora">
+                                <option value="educadora1">Ana Alvarez</option>
+                                <option value="educadora2">Patracia Lozano</option>
+                            </optgroup>
+
+                            <optgroup label="Educador">
+                                <option value="educador1">Perro Sanchez</option>
+                                <option value="educador2">Pedro Pascal</option>
+                            </optgroup>
+                        </select>
+                    </fieldset>
+                   
+                </fieldset>
+
+                <button type="button">Enviar</button>
+            </form>
+</body>
+</html>
