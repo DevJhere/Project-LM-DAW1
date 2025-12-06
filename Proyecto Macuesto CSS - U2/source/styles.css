@@ -1,0 +1,101 @@
+/* RESET UNIVERSAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ESTILOS GENERALES DEL <body> */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 6;
+    background-color: azure;
+    color: #333;
+    padding: 20px;
+}
+
+/* ESTILOS DEL HEADER */
+header {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 2px solid #333;
+    padding: 20px;
+}
+
+/* ESTILOS DEL FORMULARIO */
+.contacto {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+}
+
+.trozo {
+    color: blue;
+    font-weight: bold;
+}
+
+/* CAMPOS DEL FORMULARIO */
+.campo {
+    margin-bottom: 5px;
+}
+
+/* ETIQUETAS SPAN  */
+.campo span {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* INPUTS Y TEXTAREA */
+.campo input,
+.campo textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #6c6a6a;
+    border-radius: 10px;
+    /* Transición suave para border-color, box-shadow y transform */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    border-color: #e66565;
+    /* Color del borde al enfocar */
+    box-shadow: 0 0 8px rgb(149, 94, 6);
+    /* Sombra al enfocar */
+    outline: none;
+}
+
+.campo input:hover,
+.campo textarea:hover {
+    border: 3px solid #d50b0b;
+}
+
+/* BOTONES */
+.btn {
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 5px 5px 5px;
+
+}
+
+.btn-enviar {
+    background-color: cadetblue;
+    color: white;
+}
+
+.btn-borrar {
+    background-color: red;
+    color: white;
+}
+
+.btn:hover {
+    background-color: #333;
+    color: white;
+    transform: scale(1.05);
+}
