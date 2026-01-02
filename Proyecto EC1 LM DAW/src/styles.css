@@ -1,0 +1,262 @@
+/*Variables CSS*/
+:root {
+    --primary-color: #6a1b9a;
+    /* Morado cálido */
+    --secondary-color: #9c4dcc;
+    --accent-color: #f3e5f5;
+    --text-color: #494848;
+    --white: #ffffff;
+    --espaciado-sm: 10px;
+    --espaciado-md: 20px;
+    --espaciado-lg: 40px;
+    --fuente-principal: "Inter", sans-serif;
+}
+
+/*Reset y estilos generales*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Clases de Utilidad*/
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--espaciado-md);
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Header y Navegación */
+.main-header {
+    background-color: var(--white);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: var(--espaciado-sm) 0;
+}
+
+.header-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    max-width: 100px;
+    margin: var(--espaciado-sm);
+}
+
+.img-logo {
+    width: 70%;
+    height: auto;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: var(--espaciado-md);
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.nav-list a:hover {
+    color: var(--primary-color);
+}
+
+/* Hero - Imagen Fondo */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://impetuswear.com/cdn/shop/files/3200x1500_7a4bc3af-46c2-4a84-8887-ce692f9c05af.jpg?v=1766509889&width=3200');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: var(--espaciado-sm);
+}
+
+.boton-catalogo {
+    margin: var(--espaciado-md);
+}
+
+/* Seccion Caracteristicas */
+.caracteristicas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--espaciado-md);
+    padding: var(--espaciado-lg) 0;
+}
+
+.caracteristicas-box {
+    background-color: var(--accent-color);
+    padding: var(--espaciado-md);
+    text-align: center;
+    border-radius: 6px;
+    border: 1px solid var(--secondary-color);
+}
+
+/* Sobre Nosotros */
+.about {
+    text-align: center;
+    padding: var(--espaciado-lg) 0;
+    max-width: 800px;
+}
+
+/* Productos */
+.productos {
+    padding: var(--espaciado-lg) 0;
+}
+
+.productos h2 {
+    text-align: center;
+    margin-top: var(--espaciado-sm);
+    margin-bottom: var(--espaciado-md);
+}
+
+.producto {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: var(--espaciado-lg);
+}
+
+.producto-card {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.producto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.producto-card figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.producto-card figcaption {
+    display: none;
+}
+
+.producto-info {
+    padding: var(--espaciado-md);
+    text-align: center;
+}
+
+.precio {
+    display: block;
+    margin-top: var(--espaciado-sm);
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+/* Formulario de Contacto */
+.contacto-section {
+    background-color: #f9f9f9;
+    padding: var(--espaciado-lg) 0;
+    margin-top: var(--espaciado-lg);
+}
+
+.contacto-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaciado-md);
+}
+
+.form-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaciado-sm);
+}
+
+.form-grupo label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-grupo input,
+.form-grupo select,
+.form-grupo textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+.form-grupo input:focus,
+.form-grupo select:focus,
+.form-grupo textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* Footer */
+footer {
+    background-color: #141414;
+    color: var(--white);
+    padding: var(--espaciado-lg) 0;
+    margin-top: var(--espaciado-sm);
+}
+
+.footer-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--espaciado-sm);
+}
+
+.icono {
+    font-size: 24px;
+    color: var(--white);
+    transition: color 0.3s;
+}
+
+.icono:hover {
+    color: var(--primary-color);
+}
