@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Viajes Delmiro</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- 1 Header -->
+    <header class="main-header">
+      <div class="brand-logo">
+        <a href="#" class="logo">Viajes Delmiro</a>
+        <span class="slogan">Tu familia es primero</span>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#destinos">Destinos</a></li>
+          <li><a href="#informacion">Información</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- 2 Hero -->
+    <section id="inicio" class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Descubre el mundo con Viajes Delmiro</h1>
+        <p class="hero-subtitle">
+          Nuestra promoción exclusiva:
+          <strong>¡Los adultos viajan gratis y los niños pagan!</strong>
+        </p>
+        <div class="hero-buttons">
+          <a href="#destinos" class="btn btn-primary">Ver destinos</a>
+          <a href="#contacto" class="btn btn-secondary">Reservar ahora</a>
+        </div>
+      </div>
+    </section>
+    <!-- 3 Destinos -->
+    <section id="destinos" class="section-destinos">
+      <div class="container">
+        <h2 class="section-title">Destinos Destacados</h2>
+        <div class="destinos-grid">
+          <!-- Card 1 -->
+          <article class="destino-card">
+            <div class="destino-img-wrapper">
+              <img
+                src="img/Destino_Paris.png"
+                alt="París"
+                class="destino-img"
+              />
+              <span class="badge">Vuelo Incluido</span>
+            </div>
+            <div class="destino-info">
+              <h3>Escapada a París</h3>
+              <p>
+                Disfruta de la ciudad del amor. Hoteles céntricos, traslados y
+                desayuno.
+              </p>
+              <div class="destino-precio">
+                <span class="precio-adulto">Adultos: ¡GRATIS!</span>
+                <span class="precio-nino">Niños: 250€</span>
+              </div>
+              <a href="#" class="btn btn-primary">Reservar</a>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="destino-card">
+            <div class="destino-img-wrapper">
+              <img
+                src="img/Destino_Orlando.png"
+                alt="Orlando"
+                class="destino-img"
+              />
+              <span class="badge">Especial Familias</span>
+            </div>
+            <div class="destino-info">
+              <h3>Semana Mágica en Orlando</h3>
+              <p>
+                Visita los mejores parques temáticos del mundo con alojamiento
+                resort.
+              </p>
+              <div class="destino-precio">
+                <span class="precio-adulto">Adultos: ¡GRATIS!</span>
+                <span class="precio-nino">Niños: 490€</span>
+              </div>
+              <a href="#" class="btn btn-primary">Reservar</a>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="destino-card">
+            <div class="destino-img-wrapper">
+              <img
+                src="img/Destino_Alpes.png"
+                alt="Alpes Suizos"
+                class="destino-img"
+              />
+              <span class="badge">Aventura Invernal</span>
+            </div>
+            <div class="destino-info">
+              <h3>Ski en los Alpes Suizos</h3>
+              <p>
+                Clases de esquí, forfait y una acogedora cabaña para toda la
+                familia.
+              </p>
+              <div class="destino-precio">
+                <span class="precio-adulto">Adultos: ¡GRATIS!</span>
+                <span class="precio-nino">Niños: 380€</span>
+              </div>
+              <a href="#" class="btn btn-primary">Reservar</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- 4 Información -->
+    <section id="informacion" class="section-info">
+      <div class="container container-info">
+        <h2 class="section-title">¿Cómo funciona nuestra promoción?</h2>
+        <div class="info-steps">
+          <div class="step">
+            <div class="step-icon">1</div>
+            <h3>Elige tu destino</h3>
+            <p>Selecciona cualquiera de nuestros paquetes familiares.</p>
+          </div>
+          <div class="step">
+            <div class="step-icon">2</div>
+            <h3>Agrega a los niños</h3>
+            <p>
+              Los adultos viajan 100% gratis por cada niño de pago en la
+              reserva.
+            </p>
+          </div>
+          <div class="step">
+            <div class="step-icon">3</div>
+            <h3>¡A viajar!</h3>
+            <p>
+              Prepara las maletas y disfruta de las mejores vacaciones en
+              familia.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 Contacto -->
+    <section id="contacto" class="section-contacto">
+      <div class="container">
+        <h2 class="section-title">Contáctanos</h2>
+        <div class="form-container">
+          <form class="contact-form">
+            <div class="form-group">
+              <label for="nombre">Nombre</label>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="Tu nombre completo"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Correo electrónico</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="tu@correo.com"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="mensaje">Mensaje</label>
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                rows="4"
+                placeholder="¿En qué te podemos ayudar?"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-submit">
+              Enviar mensaje
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6 Pie de página -->
+    <footer class="main-footer">
+      <div class="container footer-content">
+        <div class="footer-brand">
+          <h2>Viajes Delmiro</h2>
+          <p>Tu familia es primero.</p>
+        </div>
+        <div class="footer-contact">
+          <p>Teléfono: +34 900 123 456</p>
+          <p>Email: hola@viajesdelmiro.com</p>
+        </div>
+        <div class="footer-social">
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+          <a href="#">Twitter</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Viajes Delmiro. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+  </body>
+</html>

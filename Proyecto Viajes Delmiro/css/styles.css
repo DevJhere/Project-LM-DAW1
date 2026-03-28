@@ -1,0 +1,519 @@
+/* Base Styles and Variables */
+:root {
+  --primary-color: #0ea5e9; /* Azul Cielo */
+  --primary-dark: #054c70;
+  --secondary-color: #f43f5e; /* Rosa / Coral */
+  --text-dark: #0f172a;
+  --text-light: #f8fafc;
+  --bg-light: #ffffff;
+  --bg-slate: #f1f5f9;
+  --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  --transition: all 0.3s ease;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-dark);
+  background-color: var(--bg-slate);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/*
+  1. Header & Navigation
+*/
+.main-header {
+  position: relative;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+}
+
+.brand-logo {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  letter-spacing: -0.5px;
+}
+
+.slogan {
+  font-size: 1rem;
+  color: #64748b;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.main-nav a {
+  font-weight: 600;
+  color: var(--text-dark);
+  font-size: 1rem;
+  transition: var(--transition);
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.main-nav a::after { /* Efecto de línea debajo del enlace al pasar el ratón */
+  content: ''; /* Genera un elemento vacío. Sin este elemento ::after no se mostraría la línea */
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary-color);
+  transition: var(--transition);
+}
+
+.main-nav a:hover {
+  color: var(--primary-color);
+}
+
+.main-nav a:hover::after {
+  width: 100%;
+}
+
+/* Responsive Header */
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  .brand {
+    align-items: center;
+  }
+  
+  .main-nav ul {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/*
+  2. Hero Section
+*/
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  background-image: url('../img/hero_family.jpg');
+  background-size: cover;
+  background-position: center;
+  color: var(--text-light);
+  padding: 2rem;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Oscurece la imagen para que el texto se lea mejor */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  animation: fadeIn 1s ease-out;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+}
+
+.hero-subtitle strong {
+  font-weight: 700;
+  color: #f6e419; /* Resalta la oferta */
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 1.2em;
+}
+
+.hero-buttons {
+  display: flex; /* Flexbox para alinear los botones */
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Maquetación de botones */
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: var(--transition);
+  border: 2px solid transparent;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  box-shadow: 0 4px 15px rgba(14, 165, 233, 0.4);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(14, 165, 233, 0.6);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--text-light);
+  border-color: var(--text-light);
+}
+
+.btn-secondary:hover {
+  background-color: var(--text-light);
+  color: var(--text-dark);
+  transform: translateY(-2px);
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/*
+  3. Destinos Destacados (CSS Grid)
+*/
+.section-destinos {
+  padding: 5rem 2rem;
+  background-color: var(--bg-slate);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--primary-dark);
+  margin-bottom: 3rem;
+  font-weight: 800;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: var(--secondary-color);
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+.destinos-grid {
+  display: grid; /* Uso de CSS Grid para maquetar las tarjetas */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+}
+
+.destino-card {
+  background-color: var(--bg-light);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.destino-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+}
+
+.destino-img-wrapper {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.destino-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.destino-card:hover .destino-img {
+  transform: scale(1.1);
+}
+
+.badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  z-index: 2;
+  box-shadow: 0 2px 5px rgba(244, 63, 94, 0.4);
+}
+
+.destino-info {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.destino-info h3 {
+  font-size: 1.4rem;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+}
+
+.destino-info p {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.destino-precio {
+  background-color: #f8fafc;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #e2e8f0;
+}
+
+.precio-adulto {
+  color: var(--primary-dark);
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.precio-nino {
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+
+.destino-card .btn {
+  text-align: center;
+  width: 100%;
+}
+
+/*
+  4. Información
+*/
+.section-info {
+  padding: 5rem 2rem;
+  background-color: var(--bg-light);
+}
+
+.info-steps {
+  display: flex; /* Uso de Flexbox para maquetar los pasos */
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.step {
+  flex: 1;
+  min-width: 250px;
+  max-width: 350px;
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--bg-slate);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.step:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.step-icon {
+  width: 60px;
+  height: 60px;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 0 auto 1.5rem;
+}
+
+.step h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+.step p {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+/*
+  5. Sección de Contacto
+*/
+.section-contacto {
+  padding: 5rem 2rem;
+  background-color: var(--bg-slate);
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: var(--bg-light);
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.8rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.2);
+}
+
+.btn-submit {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/*
+  6. Footer (CSS Grid)
+*/
+.main-footer {
+  background-color: #0f172a;
+  color: #cbd5e1;
+  padding: 4rem 2rem 1rem;
+}
+
+.footer-content {
+  display: grid; /* CSS Grid requirement */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.footer-brand h2 {
+  color: white;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-contact p,
+.footer-social a {
+  margin-bottom: 0.8rem;
+  display: block;
+  transition: var(--transition);
+}
+
+.footer-social a:hover {
+  color: var(--primary-color);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid #1e293b;
+  font-size: 0.9rem;
+}
